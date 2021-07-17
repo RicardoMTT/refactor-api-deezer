@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "refactor-angular"
+  "defaultProject": "refactor-angular",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

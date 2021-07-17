@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="container__buscador" [formGroup]="searchForm">
+    <img
+      src="assets/icons/search.png"
+      class="container__buscador__icon"
+      alt="logo"
+    />
+    <input
+      class="container__buscador__inputClass"
+      type="text"
+      placeholder="Buscar"
+      formControlName="search"
+    />
+  </div>
+  <div class="container__user">
+    <i class="fas fa-user"></i>
+    <h3 class="container__user__prueba">Francisco M.</h3>
+    <img src="assets/icons/menu.svg" (click)="isTrue = !isTrue" />
+    <ng-container *ngIf="isTrue">
+      <div class="container__user__logout" (click)="logout()">
+        <p>Cerrar Sesión</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div></div>
+</div>

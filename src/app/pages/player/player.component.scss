@@ -1,0 +1,64 @@
+.player {
+  background: #e86060;
+
+  &__container {
+    display: flex;
+    &__replayer {
+      height: 105px;
+      width: 100%;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &__content {
+      color: #ffffff;
+      font-family: "Quicksand", sans-serif;
+      display: flex;
+      padding: 10px 20px;
+      &__title {
+        width: 355px;
+        flex-direction: column;
+        line-height: 30px;
+        padding: 15px;
+      }
+    }
+    &__reprod {
+      display: flex;
+      width: 150px;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .player {
+    height: 500px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      &__reprod {
+        width: 275px;
+      }
+      &__replayer {
+        padding: 0;
+      }
+    }
+  }
+}
+p {
+  margin: 0;
+}
+
+input[type="range"] {
+  color: #ffffff;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  color: #ffffff;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  color: #ffffff;
+}

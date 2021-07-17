@@ -1,0 +1,34 @@
+<ng-container *ngIf="searchQuery.itemCurrent$ | async as Item">
+  <div class="item-selected">
+    <div class="item-selected__container">
+      <div class="item-selected__container__left">
+        <img [src]="Item.album.cover" alt="" />
+        <!-- <img
+            src="assets/images/play.png"
+            class="item-selected__container__left__relative"
+            alt=""
+          /> -->
+        <i
+          class="fa fa-play fa-7x item-selected__container__left__relative"
+          style="color: white"
+        ></i>
+      </div>
+      <div class="item-selected__container__right">
+        <div class="item-selected__container__right__item">
+          <h1 style="color: white !important">
+            {{ Item.artist.name }} {{ Item.artist.id }},21
+          </h1>
+          <label>{{ Item.album.title }}</label>
+          <p>
+            Adele Laurie Blue Adkins (Tottenham, Londres, Inglaterra, 5 de mayo
+            de 1988), conocida simplemente como Adele, es una cantante,
+            compositora y multinstrumentista británica.8​
+          </p>
+          <button class="item-selected__container__right__item__btn">
+            Reproducir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

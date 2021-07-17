@@ -1,0 +1,29 @@
+<div class="sidebar">
+  <div class="sidebar__logo">
+    <img src="assets/images/logo.png" alt="" />
+    <h2>Foxbel Music</h2>
+  </div>
+  <h4>Mi liberia</h4>
+  <ul>
+    <li
+      routerLink="/dashboard/recent/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="is-active"
+    >
+      Recientes
+    </li>
+    <li routerLink="/dashboard/artist">Artistas</li>
+    <li routerLink="/dashboard/album" routerLinkActive="is-active">Álbums</li>
+    <li routerLink="/dashboard/songs" routerLinkActive="is-active">
+      Canciones
+    </li>
+    <li>Estaciones</li>
+  </ul>
+  <h4>Playlist</h4>
+  <ul>
+    <li>Metal</li>
+    <li>Para Bailar</li>
+    <li>Rock 90s</li>
+    <li>Baladas</li>
+  </ul>
+</div>

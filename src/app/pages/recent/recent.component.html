@@ -1,0 +1,28 @@
+<app-item-selected></app-item-selected>
+
+<ng-container *ngIf="(searchQuery.result$ | async).length > 0; else isEmpty">
+  <h2>Resultados</h2>
+  <div class="container">
+    <div
+      class="card"
+      *ngFor="let item of searchQuery.result$ | async"
+      (click)="updateItemSelected(item.id)"
+    >
+      <img
+        [src]="item.album.cover"
+        alt="Avatar"
+        style="width: 100%; cursor: pointer"
+      />
+      <i class="fa fa-play fa-5x icon-player" style="color: white"></i>
+      <div class="container">
+        <h4>
+          <b>{{ item.album.title }}</b>
+        </h4>
+        <p>{{ item.artist.name }}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #isEmpty>
+  <h1></h1>
+</ng-template>
