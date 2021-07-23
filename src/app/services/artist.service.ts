@@ -22,6 +22,8 @@ export class ArtistService {
       .pipe(
         tap((val: any) => {
           this.searchStore.remove();
+          console.log('val');
+
           this.searchStore.upsertMany(val.data);
           this.searchStore.update((state) => {
             return {
